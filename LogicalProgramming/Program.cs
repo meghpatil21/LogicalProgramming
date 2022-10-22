@@ -5,27 +5,27 @@
         static void Main(string[] args)
         {
 
-            int sum = 0;
-            int n;
-            Console.Write("Enter the Number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            n = number;
-            for (int i = 1; i < number; i++)
+            Console.WriteLine("Enter the Number: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int i;
+            int isPrime = 1;
+
+            for (i = 2; i <= n / 2; i++)  
             {
-                if (number % i == 0)
+                if (n % i == 0)
                 {
-                    sum = sum + i;
+                    isPrime = 0;
+                    Console.WriteLine("Number is Not Prime");
+                    break;
                 }
+
             }
-            if (sum == n)
+
+
+            if (isPrime == 1)
+
             {
-                Console.WriteLine($"\n {number} is a perfect number");
-                
-            }
-            else
-            {
-                Console.WriteLine($"\n {number} is not a perfect number");
-                
+                Console.WriteLine("Number is Prime");
             }
 
         }
