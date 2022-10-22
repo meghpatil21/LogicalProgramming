@@ -1,21 +1,22 @@
-﻿namespace LogicalProgramming
+﻿using System.Diagnostics;
+
+namespace LogicalProgramming
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            int reverse = 0, rem;
-            Console.WriteLine("Enter a number: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            while (n != 0)
-            {
-                rem = n % 10;
-                reverse = reverse * 10 + rem;
-                n = n / 10;
-            }
-            Console.WriteLine("Reversed Number: " + reverse);
+            Stopwatch stopwatch = new Stopwatch();
+            Console.WriteLine("Enter to start Stopwatch");
+            Console.ReadLine();
+            stopwatch.Start();
 
+            Console.WriteLine("Enter to stop Stopwatch");
+            Console.ReadLine();
+            stopwatch.Stop();
+
+            Console.WriteLine("Time Elapsed : {0}", stopwatch.Elapsed);
         }
     }
 }
