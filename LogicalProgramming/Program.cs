@@ -5,28 +5,16 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter the Number: ");
+            int reverse = 0, rem;
+            Console.WriteLine("Enter a number: ");
             int n = Convert.ToInt32(Console.ReadLine());
-            int i;
-            int isPrime = 1;
-
-            for (i = 2; i <= n / 2; i++)  
+            while (n != 0)
             {
-                if (n % i == 0)
-                {
-                    isPrime = 0;
-                    Console.WriteLine("Number is Not Prime");
-                    break;
-                }
-
+                rem = n % 10;
+                reverse = reverse * 10 + rem;
+                n = n / 10;
             }
-
-
-            if (isPrime == 1)
-
-            {
-                Console.WriteLine("Number is Prime");
-            }
+            Console.WriteLine("Reversed Number: " + reverse);
 
         }
     }
